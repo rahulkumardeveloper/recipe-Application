@@ -1,0 +1,25 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+        <a class="navbar-brand" routerLink="/recipe">Recipe Book</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class=" nav navbar-nav">
+                <li class="nav-item" routerLinkActive="active">
+                    <a class="nav-link" routerLink="/recipe">Recipes</a>
+                </li>
+                <li class="nav-item" routerLinkActive="active">
+                    <a class="nav-link" routerLink="/shoppingList">Shopping list</a>
+                </li>
+            </ul>
+        </div>
+        <div style="float: right;">
+            <button mat-raised-button color="primary" routerLink="/signup" mat-raised-button #tooltip="matTooltip"
+                matTooltip="Registration">Sign Up</button>&nbsp;
+            <button mat-raised-button color="warn" routerLink="/login">{{authenticate}}</button>
+
+        </div>
+    </div>
+</nav>

@@ -1,0 +1,9 @@
+#content{
+    width: 600px;
+    height: 837px;
+}
+img {
+    width: 85%;
+    border-radius: 22px;
+    box-shadow: 1px 1px 13px 1px black;
+}

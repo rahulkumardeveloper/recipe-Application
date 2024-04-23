@@ -1,0 +1,35 @@
+<div class="row">
+    <div class="col-md-5" style="border: 1px solid;">
+        <h1> List of Clinic Name </h1>
+        <hr>
+        <table>
+            <tr>
+                <th>Sr.No.</th>&nbsp;
+                <th>Clinic Name</th>
+            </tr>
+            <tr *ngFor="let data of clinicData;let i=index">
+                <td>{{i+1}}</td>&nbsp;
+                <td><a (click)="onClinicData(i)" style="cursor: pointer;">{{data.clinicName}} </a></td>
+            </tr>
+        </table>
+    </div>
+
+    <!-- Show Qr Code Here in Section -->
+    <div class="col-md-7" style="border: 1px solid;min-height: 400px;" id="content" #content>
+        <h3 style="text-align: center;"> Your QR Code Show Here</h3>
+        <hr>
+        <div *ngIf="resultStatus">
+            <h1 class="text-center text-danger">{{name}}</h1>
+            <div style="text-align: center;" class="a4">
+                <qr-code [value]=qrForData size="300"></qr-code>
+            </div>
+            <div class="img text-center">
+                <img src="https://imageio.forbes.com/specials-images/imageserve/5edaacf9b6ac5c00076559df/A-stethoscope-and-clipboard-in-a-doctor-s-office-/960x0.jpg?fit=bounds&format=jpg&width=960"
+                    alt="" srcset="">
+            </div>
+            <div class="button text-center mt-2">
+                <button class="btn btn-success" (click)="Download()">pdf Download</button>
+            </div>
+        </div>
+    </div>
+</div>

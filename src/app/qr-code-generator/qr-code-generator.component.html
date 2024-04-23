@@ -1,0 +1,162 @@
+<section class="vh-100" style="background-color: #eee;">
+    <div class="container h-100">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col-lg-10 col-xl-10">
+                <div class="card text-black;" style="border-radius: 25px;">
+                    <div class="card-body p-md-3 ">
+                        <div class="row justify-content-center">
+                            <div class="col-md-10 col-lg-6 col-xl-5 order-2 order-lg-1">
+                                <p class="text-center h1 fw-bold mb-2 mx-1 mx-md-4 mt-2">Clinic Information</p>
+                                <form class="mx-1 mx-md-4" [formGroup]="clinicForm" >
+                                    <div class="d-flex flex-row align-items-center mb-2">
+                                        <i class="fas fa-user fa-lg me-3 fa-fw"></i>
+                                        <!-- Clinic Name -->
+                                        <div class="form-outline flex-fill mb-0">
+                                            <label class="form-label" for="form3Example1c"><b>Clinic Name:</b></label>
+                                            <input type="text" id="form3Example1c" class="form-control"
+                                                placeholder="Enter Clinic Name" formControlName="clinicName" />
+                                        </div>
+                                        <div *ngIf="gloabalStatus && this.clinicForm.controls['clinicName'].errors">
+                                            <span *ngIf="this.clinicForm.controls['clinicName'].errors['required']">*
+                                                Clinic Name is required.
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <!-- Address Line 1 -->
+                                    <div class="d-flex flex-row align-items-center mb-2">
+                                        <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
+                                        <div class="form-outline flex-fill mb-0">
+                                            <label class="form-label" for="form3Example2c"><b>Address Line
+                                                    1:</b></label>
+                                            <input type="text" id="form3Example2c" class="form-control"
+                                                placeholder="Enter Address line" formControlName="addressline1" />
+                                        </div>
+                                        <div *ngIf="gloabalStatus && this.clinicForm.controls['addressline1'].errors">
+                                            <span
+                                                *ngIf="this.clinicForm.controls['addressline1'].errors['required']">*Address
+                                                1 is required.</span>
+                                        </div>
+                                    </div>
+
+                                    <!-- Address Line 2 -->
+
+                                    <div class="d-flex flex-row align-items-center mb-2">
+                                        <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
+                                        <div class="form-outline flex-fill mb-0">
+                                            <label class="form-label" for="form3Example2c"><b>Address Line
+                                                    2:</b></label>
+
+                                            <input type="text" id="form3Example2c" class="form-control"
+                                                placeholder="Enter Address line" formControlName="addressline2" />
+                                        </div>
+                                        <div *ngIf="gloabalStatus && this.clinicForm.controls['addressline2'].errors">
+                                            <span
+                                                *ngIf="this.clinicForm.controls['addressline2'].errors['required']">*Address2
+                                                is  required</span>            
+                                        </div>
+                                    </div>
+                                    <!-- City -->
+
+                                    <div class="d-flex flex-row align-items-center mb-2">
+                                        <i class="fas fa-lock fa-lg me-3 fa-fw"></i>
+                                        <div class="form-outline flex-fill mb-0">
+                                            <label class="form-label" for="form3Example4c"><b>City Name</b></label>
+                                            <input type="text" id="form3Example4c" class="form-control"
+                                                placeholder="Enter City" formControlName="city" />
+                                        </div>
+                                        <div *ngIf="gloabalStatus && this.clinicForm.controls['city'].errors">
+                                            <span *ngIf="this.clinicForm.controls['city'].errors['required']">* City
+                                                Name is Required                                               
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <!-- province: -->
+
+                                    <div class="d-flex flex-row align-items-center mb-2">
+                                        <i class="fas fa-lock fa-lg me-3 fa-fw"></i>
+                                        <div class="form-outline flex-fill mb-0">
+                                            <label class="form-label" for="form3Example4c"><b>Province:</b></label>
+                                            <input type="text" id="form3Example4c" class="form-control"
+                                                placeholder="Enter province:" formControlName="province" />
+                                        </div>
+                                        <div *ngIf="gloabalStatus && this.clinicForm.controls['province'].errors">
+                                            <span *ngIf="this.clinicForm.controls['province'].errors['required']">*
+                                                Province is required.
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <!-- postalCode: -->
+
+                                    <div class="d-flex flex-row align-items-center mb-2">
+                                        <i class="fas fa-lock fa-lg me-3 fa-fw"></i>
+                                        <div class="form-outline flex-fill mb-0">
+                                            <label class="form-label" for="form3Example4c"><b>Postal Code</b></label>
+                                            <input type="text" id="form3Example4c" class="form-control"
+                                                placeholder="Enter postalCode" formControlName="postalCode" />
+                                        </div>
+                                        <div *ngIf="gloabalStatus && this.clinicForm.controls['postalCode'].errors">
+                                            <span *ngIf="this.clinicForm.controls['postalCode'].errors['required']">*
+                                                PostalCode is Required
+                                            </span>
+                                        </div>
+                                    </div>
+
+                                    <!-- clinicFax: -->
+
+                                    <div class="d-flex flex-row align-items-center mb-2">
+                                        <i class="fas fa-lock fa-lg me-3 fa-fw"></i>
+                                        <div class="form-outline flex-fill mb-0">
+                                            <label class="form-label" for="form3Example4c"><b>Clinic Fax</b></label>
+                                            <input type="number" id="form3Example4c" class="form-control"
+                                                placeholder="Enter clinicFax" formControlName="clinicFax" />
+                                        </div>
+                                        <div *ngIf="gloabalStatus && this.clinicForm.controls['clinicFax'].errors">
+                                            <span *ngIf="this.clinicForm.controls['clinicFax'].errors['required']">*
+                                                ClinicFax is Required
+
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <!-- lat:: -->
+                                    <div class="d-flex flex-row align-items-center mb-2">
+                                        <i class="fas fa-lock fa-lg me-3 fa-fw"></i>
+                                        <div class="form-outline flex-fill mb-0">
+                                            <label class="form-label" for="form3Example4c"><b>lat:</b></label>
+                                            <input type="text" id="form3Example4c" class="form-control"
+                                                placeholder="Enter lat " formControlName="lat" />
+                                        </div>
+                                        <div *ngIf="gloabalStatus && this.clinicForm.controls['lat'].errors">
+                                            <span *ngIf="this.clinicForm.controls['lat'].errors['required']">* Latitute
+                                                is  Required   
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <!-- lng:: -->
+                                    <div class="d-flex flex-row align-items-center mb-2">
+                                        <i class="fas fa-lock fa-lg me-3 fa-fw"></i>
+                                        <div class="form-outline flex-fill mb-0">
+                                            <label class="form-label" for="form3Example4c"><b>lng:</b></label>
+                                            <input type="text" id="form3Example4c" class="form-control"
+                                                placeholder="Enter lngitute:" formControlName="lng" />
+                                        </div>
+                                        <div *ngIf="gloabalStatus && this.clinicForm.controls['lng'].errors">
+                                            <span *ngIf="this.clinicForm.controls['lng'].errors['required']">* Lngitute
+                                                is Required
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
+                                        <button type="submit" class="btn btn-primary btn-sm my-3 mx-2" (click)="onSubmit()">Submit</button>&nbsp;
+                                        <button type="submit" class="btn btn-primary btn-sm my-3 mx-2" (click)="SetVanluebyTeja()">Teja Bro</button>&nbsp;
+                                        <button type="submit" class="btn btn-primary btn-sm my-3 mx-2" (click)="SetVanluebyRahul()">Rahul</button>&nbsp;
+                                        <button type="submit" class="btn btn-primary btn-sm my-3 mx-2" (click)="SetVanluebyManas()">Manas</button>&nbsp;
+                                    </div>
+                              </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
